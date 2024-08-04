@@ -1,0 +1,13 @@
+UPDATE my_employee 
+SET 
+    salary= salary + (salary * 10 / 100) 
+WHERE 
+    department_id=90;
+
+
+
+-------------------------
+Output
+-------------------------
+
+3 rows updated.

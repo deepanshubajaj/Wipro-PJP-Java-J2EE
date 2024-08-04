@@ -1,0 +1,13 @@
+select last_name,salary from employees where salary > 12000;
+
+--------------------------------------
+Output
+--------------------------------------
+King	24000
+Kochhar	17000
+De Haan	17000
+Greenberg	12008
+Russell	14000
+Partners	13500
+Hartstein	13000
+Higgins	12008

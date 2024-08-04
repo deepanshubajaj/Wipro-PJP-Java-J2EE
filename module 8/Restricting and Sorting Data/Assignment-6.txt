@@ -1,0 +1,11 @@
+select last_name as employee,salary as monthl_salary from employees where salary BETWEEN 5000 AND 12000 and department_id in (20,50);
+
+---------------------------------
+Output
+---------------------------------
+Weiss	8000
+Fripp	8200
+Kaufling	7900
+Vollman	6500
+Mourgos	5800
+Fay	6000

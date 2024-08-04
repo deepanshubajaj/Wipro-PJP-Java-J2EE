@@ -1,0 +1,21 @@
+--ScriptName=lab_10_01.sql
+CREATE TABLE depts(
+    ID NUMBER(7)not NULL,
+    Name VARCHAR2(20),
+    CONSTRAINT pk_depts PRIMARY KEY(ID)
+);
+DESCRIBE depts;
+
+/*
+-----------------------------
+Output:
+-----------------------------
+
+Table DEPTS created.
+
+Name Null?    Type         
+---- -------- ------------ 
+ID   NOT NULL NUMBER(7)    
+NAME          VARCHAR2(20) 
+
+*/

@@ -1,0 +1,10 @@
+select employee_id,last_name,salary,department_id from employees 
+where manager_id = &mgr_id order by &colm;
+
+---------------------------------
+Output
+---------------------------------
+105	Austin	4800	60
+104	Ernst	6000	60
+107	Lorentz	4200	60
+106	Pataballa	4800	60

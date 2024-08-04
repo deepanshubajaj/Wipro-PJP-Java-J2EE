@@ -1,0 +1,50 @@
+select last_name,job_id,salary from employees 
+where job_id IN
+  ('ST_CLERK','SA_REP') and salary not IN (2500,3500,7000);
+
+---------------------------------
+Output
+---------------------------------
+Nayer	ST_CLERK	3200
+Mikkilineni	ST_CLERK	2700
+Landry	ST_CLERK	2400
+Markle	ST_CLERK	2200
+Bissot	ST_CLERK	3300
+Atkinson	ST_CLERK	2800
+Olson	ST_CLERK	2100
+Mallin	ST_CLERK	3300
+Rogers	ST_CLERK	2900
+Gee	ST_CLERK	2400
+Philtanker	ST_CLERK	2200
+Ladwig	ST_CLERK	3600
+Stiles	ST_CLERK	3200
+Seo	ST_CLERK	2700
+Davies	ST_CLERK	3100
+Matos	ST_CLERK	2600
+Tucker	SA_REP	10000
+Bernstein	SA_REP	9500
+Hall	SA_REP	9000
+Olsen	SA_REP	8000
+Cambrault	SA_REP	7500
+King	SA_REP	10000
+Sully	SA_REP	9500
+McEwen	SA_REP	9000
+Smith	SA_REP	8000
+Doran	SA_REP	7500
+Vishney	SA_REP	10500
+Greene	SA_REP	9500
+Marvins	SA_REP	7200
+Lee	SA_REP	6800
+Ande	SA_REP	6400
+Banda	SA_REP	6200
+Ozer	SA_REP	11500
+Bloom	SA_REP	10000
+Fox	SA_REP	9600
+Smith	SA_REP	7400
+Bates	SA_REP	7300
+Kumar	SA_REP	6100
+Abel	SA_REP	11000
+Hutton	SA_REP	8800
+Taylor	SA_REP	8600
+Livingston	SA_REP	8400
+Johnson	SA_REP	6200

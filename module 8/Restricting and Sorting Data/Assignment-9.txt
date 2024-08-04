@@ -1,0 +1,40 @@
+select last_name ,hire_date,commission_pct from employees where commission_pct is not null order by salary desc,commission_pct desc;
+
+---------------------------------
+Output
+---------------------------------
+Russell	01-OCT-04	0.4
+Partners	05-JAN-05	0.3
+Errazuriz	10-MAR-05	0.3
+Ozer	11-MAR-05	0.25
+Cambrault	15-OCT-07	0.3
+Abel	11-MAY-04	0.3
+Vishney	11-NOV-05	0.25
+Zlotkey	29-JAN-08	0.2
+King	30-JAN-04	0.35
+Tucker	30-JAN-05	0.3
+Bloom	23-MAR-06	0.2
+Fox	24-JAN-06	0.2
+Sully	04-MAR-04	0.35
+Bernstein	24-MAR-05	0.25
+Greene	19-MAR-07	0.15
+McEwen	01-AUG-04	0.35
+Hall	20-AUG-05	0.25
+Hutton	19-MAR-05	0.25
+Taylor	24-MAR-06	0.2
+Livingston	23-APR-06	0.2
+Smith	10-MAR-05	0.3
+Olsen	30-MAR-06	0.2
+Doran	15-DEC-05	0.3
+Cambrault	09-DEC-06	0.2
+Smith	23-FEB-07	0.15
+Bates	24-MAR-07	0.15
+Marvins	24-JAN-08	0.1
+Sewall	03-NOV-06	0.25
+Tuvault	23-NOV-07	0.15
+Grant	24-MAY-07	0.15
+Lee	23-FEB-08	0.1
+Ande	24-MAR-08	0.1
+Banda	21-APR-08	0.1
+Johnson	04-JAN-08	0.1
+Kumar	21-APR-08	0.1

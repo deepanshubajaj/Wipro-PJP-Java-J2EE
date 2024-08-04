@@ -1,0 +1,15 @@
+create TABLE my_employee as
+select employee_id,first_name,last_name,department_id,salary from employees where 1=2;
+
+-------------------------
+Output
+-------------------------
+Name            Null?    Type         
+--------------- -------- ------------ 
+DEPARTMENT_ID   NOT NULL NUMBER(4)    
+DEPARTMENT_NAME NOT NULL VARCHAR2(30) 
+MANAGER_ID               NUMBER(6)    
+LOCATION_ID              NUMBER(4)    
+
+Table MY_EMPLOYEE created.
+

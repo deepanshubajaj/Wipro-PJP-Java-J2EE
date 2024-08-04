@@ -1,0 +1,101 @@
+CREATE TABLE stdnt_log (
+	Rollno Number (4) Primary Key,
+	StudentName Varchar (20)  Not Null,
+	Standard Varchar (2) Not Null,
+	Date_Of_Birth Date,
+	Fees Number (9,2)
+);
+INSERT INTO stdnt_log VALUES(1001, 'BOB', 'IV', '15-AUG-1947', 4500.0);
+INSERT INTO stdnt_log VALUES(1002, 'Alice', 'V', '16-Nov-1947', 6500.0);
+INSERT INTO stdnt_log VALUES(1003, 'Sneha', 'V1', '10-Jan-1944', 7500.0);
+INSERT INTO stdnt_log VALUES(1004, 'Lucy', 'X', '22-Aug-1942', 9000.0);
+INSERT INTO stdnt_log VALUES(1005, 'Vicky', 'IX', '28-May-1943', 9000.0);
+
+SELECT * FROM stdnt_log;
+
+
+CREATE TABLE stdnt_logs (
+	Rollno Number (4) Primary Key,
+	StudentName Varchar (20)  Not Null,
+	Standard Varchar (2) Not Null,
+	Date_Of_Birth Date,
+	Fees Number (9,2)
+);
+INSERT INTO stdnt_log VALUES(1006, 'BB', 'IV', '15-AUG-1947', 4500.0);
+
+SELECT * FROM stdnt_logs;
+
+
+/*
+
+-------------------------------------------
+Output:(Before Deleting through java)
+-------------------------------------------
+
+Table STDNT_LOG created.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+    ROLLNO STUDENTNAME          ST DATE_OF_B       FEES
+---------- -------------------- -- --------- ----------
+      1001 BOB                  IV 15-AUG-47       4500
+      1002 Alice                V  16-NOV-47       6500
+      1003 Sneha                V1 10-JAN-44       7500
+      1004 Lucy                 X  22-AUG-42       9000
+      1005 Vicky                IX 28-MAY-43       9000
+
+
+Table STDNT_LOGS created.
+
+
+1 row inserted.
+
+
+    ROLLNO STUDENTNAME          ST DATE_OF_B       FEES
+---------- -------------------- -- --------- ----------
+      1006 BB                   IV 15-AUG-47       4500
+
+
+
+*/
+
+
+
+SELECT * FROM stdnt_log;
+SELECT * FROM stdnt_logs;
+
+
+/*
+
+-------------------------------------------------
+Output:(After Deleting through java)
+-------------------------------------------------
+
+    ROLLNO STUDENTNAME          ST DATE_OF_B       FEES
+---------- -------------------- -- --------- ----------
+      1001 BOB                  IV 15-AUG-47       4500
+      1002 Alice                V  16-NOV-47       6500
+      1003 Sneha                V1 10-JAN-44       7500
+      1005 Vicky                IX 28-MAY-43       9000
+      
+
+
+    ROLLNO STUDENTNAME          ST DATE_OF_B       FEES
+---------- -------------------- -- --------- ----------
+      1006 BB                   IV 15-AUG-47       4500
+      1004 Lucy                 X  22-AUG-42       9000
+
+*/

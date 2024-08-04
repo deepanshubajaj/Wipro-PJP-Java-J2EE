@@ -1,0 +1,142 @@
+--ScriptName=lab_10_03.sql
+
+CREATE TABLE deptts(
+    ID NUMBER(7)not NULL,
+    Name VARCHAR2(20),
+    CONSTRAINT pk_deptts PRIMARY KEY(ID)
+    
+);
+
+DESCRIBE deptts;
+
+INSERT INTO deptts
+	SELECT department_id, department_name
+	FROM departments;
+
+SELECT * FROM deptts;
+
+CREATE TABLE emps(
+    e_ID NUMBER(7) not NULL,
+    Last_Name VARCHAR2(25),
+    First_Name VARCHAR2(25),
+    ID NUMBER(7) not NULL,
+    CONSTRAINT pk_emps PRIMARY KEY(e_ID),
+    CONSTRAINT fk_emps FOREIGN KEY (ID)
+        REFERENCES deptts(ID)
+    
+);
+DESCRIBE emps;
+
+INSERT INTO emps (e_ID, Last_Name,First_Name,ID)
+   VALUES (101, 'Sam','Sundar',10);
+
+SELECT * FROM emps;
+   
+ALTER TABLE emps
+    DISABLE CONSTRAINT pk_emps;
+    
+INSERT INTO emps (e_ID, Last_Name,First_Name,ID)
+   VALUES (101, 'Ram','Krishna',20);
+
+INSERT INTO emps (e_ID, Last_Name,First_Name,ID)
+   VALUES (102, 'Gopi',null,40);
+   
+INSERT INTO emps (e_ID, Last_Name,First_Name,ID)
+   VALUES (103, null,'Ram',20);
+   
+SELECT * FROM emps;
+
+/*
+
+--------------------------------------------------
+Output:
+--------------------------------------------------
+
+
+Table DEPTTS created.
+
+Name Null?    Type         
+---- -------- ------------ 
+ID   NOT NULL NUMBER(7)    
+NAME          VARCHAR2(20) 
+
+27 rows inserted.
+
+        ID NAME                
+---------- --------------------
+        10 Administration      
+        20 Marketing           
+        30 Purchasing          
+        40 Human Resources     
+        50 Shipping            
+        60 IT                  
+        70 Public Relations    
+        80 Sales               
+        90 Executive           
+       100 Finance             
+       110 Accounting          
+
+        ID NAME                
+---------- --------------------
+       120 Treasury            
+       130 Corporate Tax       
+       140 Control And Credit  
+       150 Shareholder Services
+       160 Benefits            
+       170 Manufacturing       
+       180 Construction        
+       190 Contracting         
+       200 Operations          
+       210 IT Support          
+       220 NOC                 
+
+        ID NAME                
+---------- --------------------
+       230 IT Helpdesk         
+       240 Government Sales    
+       250 Retail Sales        
+       260 Recruiting          
+       270 Payroll             
+
+27 rows selected. 
+
+
+Table EMPS created.
+
+Name       Null?    Type         
+---------- -------- ------------ 
+E_ID       NOT NULL NUMBER(7)    
+LAST_NAME           VARCHAR2(25) 
+FIRST_NAME          VARCHAR2(25) 
+ID         NOT NULL NUMBER(7)    
+
+1 row inserted.
+
+
+      E_ID LAST_NAME                 FIRST_NAME                        ID
+---------- ------------------------- ------------------------- ----------
+       101 Sam                       Sundar                            10
+
+
+Table EMPS altered.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+      E_ID LAST_NAME                 FIRST_NAME                        ID
+---------- ------------------------- ------------------------- ----------
+       101 Sam                       Sundar                            10
+       101 Ram                       Krishna                           20
+       102 Gopi                                                        40
+       103                           Ram                               20
+
+
+
+*/

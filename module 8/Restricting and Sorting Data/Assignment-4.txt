@@ -1,0 +1,8 @@
+select last_name,job_id,hire_date from employees where last_name in ('Matos','Taylor') order by hire_date;
+
+---------------------------------
+Output
+---------------------------------
+Taylor	SH_CLERK	24-JAN-06
+Matos	ST_CLERK	15-MAR-06
+Taylor	SA_REP	24-MAR-06

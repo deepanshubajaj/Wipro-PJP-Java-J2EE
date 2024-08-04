@@ -1,0 +1,6 @@
+select last_name ,hire_date from employees where manager_id is null;
+
+---------------------------------
+Output
+---------------------------------
+King	17-JUN-03

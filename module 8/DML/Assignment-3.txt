@@ -1,0 +1,7 @@
+insert INTO my_employee VALUES(201,'Michael','Hartstein',20,13000);
+
+
+-------------------------
+Output
+-------------------------
+1 row inserted.

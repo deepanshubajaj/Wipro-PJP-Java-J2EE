@@ -1,0 +1,373 @@
+--ScriptName=lab_10_01_Populate.sql
+
+INSERT INTO depts
+	SELECT department_id, department_name
+	FROM departments;
+
+SELECT * FROM depts;
+
+INSERT INTO depts (ID, Name)
+   VALUES (10, 'Accounts');
+   
+SELECT * FROM depts;
+
+ALTER TABLE depts
+    DISABLE CONSTRAINT pk_depts;
+
+ALTER TABLE depts
+    MODIFY (ID null);
+    
+INSERT INTO depts (ID, Name)
+   VALUES (null, 'IT');
+   
+SELECT * FROM depts;
+
+UPDATE depts
+    SET ID=20
+    WHERE Name='IT';
+
+SELECT * FROM depts;
+
+TRUNCATE TABLE depts;
+
+ALTER TABLE depts  MODIFY Id VARCHAR2(7);
+
+INSERT INTO depts
+	SELECT department_id, department_name
+	FROM departments;
+
+INSERT INTO depts (ID, Name)
+   VALUES (10, 'Accounts');
+   
+INSERT INTO depts (ID, Name)
+   VALUES (20, 'IT');
+
+INSERT INTO depts (ID, Name)    
+   VALUES ('A1', 'Accounts');
+
+SELECT * FROM depts;
+
+TRUNCATE TABLE depts;
+
+ALTER TABLE depts
+    MODIFY Id NUMBER(7);
+    
+INSERT INTO depts
+	SELECT department_id, department_name
+	FROM departments;
+
+INSERT INTO depts (ID, Name)
+   VALUES (10, 'Accounts');
+   
+INSERT INTO depts (ID, Name)
+   VALUES (20, 'IT');
+
+INSERT INTO depts (ID, Name)
+   VALUES (30, 'Accounts');
+   
+SELECT * FROM depts;
+
+
+
+
+
+/*
+-------------------------------------------------
+Output:
+-------------------------------------------------
+
+
+27 rows inserted.
+
+
+        ID NAME                
+---------- --------------------
+        10 Administration      
+        20 Marketing           
+        30 Purchasing          
+        40 Human Resources     
+        50 Shipping            
+        60 IT                  
+        70 Public Relations    
+        80 Sales               
+        90 Executive           
+       100 Finance             
+       110 Accounting          
+
+        ID NAME                
+---------- --------------------
+       120 Treasury            
+       130 Corporate Tax       
+       140 Control And Credit  
+       150 Shareholder Services
+       160 Benefits            
+       170 Manufacturing       
+       180 Construction        
+       190 Contracting         
+       200 Operations          
+       210 IT Support          
+       220 NOC                 
+
+        ID NAME                
+---------- --------------------
+       230 IT Helpdesk         
+       240 Government Sales    
+       250 Retail Sales        
+       260 Recruiting          
+       270 Payroll             
+
+27 rows selected. 
+
+
+        ID NAME                
+---------- --------------------
+        10 Administration      
+        20 Marketing           
+        30 Purchasing          
+        40 Human Resources     
+        50 Shipping            
+        60 IT                  
+        70 Public Relations    
+        80 Sales               
+        90 Executive           
+       100 Finance             
+       110 Accounting          
+
+        ID NAME                
+---------- --------------------
+       120 Treasury            
+       130 Corporate Tax       
+       140 Control And Credit  
+       150 Shareholder Services
+       160 Benefits            
+       170 Manufacturing       
+       180 Construction        
+       190 Contracting         
+       200 Operations          
+       210 IT Support          
+       220 NOC                 
+
+        ID NAME                
+---------- --------------------
+       230 IT Helpdesk         
+       240 Government Sales    
+       250 Retail Sales        
+       260 Recruiting          
+       270 Payroll             
+
+27 rows selected. 
+
+
+Table DEPTS altered.
+
+
+Table DEPTS altered.
+
+
+1 row inserted.
+
+
+        ID NAME                
+---------- --------------------
+        10 Administration      
+        20 Marketing           
+        30 Purchasing          
+        40 Human Resources     
+        50 Shipping            
+        60 IT                  
+        70 Public Relations    
+        80 Sales               
+        90 Executive           
+       100 Finance             
+       110 Accounting          
+
+        ID NAME                
+---------- --------------------
+       120 Treasury            
+       130 Corporate Tax       
+       140 Control And Credit  
+       150 Shareholder Services
+       160 Benefits            
+       170 Manufacturing       
+       180 Construction        
+       190 Contracting         
+       200 Operations          
+       210 IT Support          
+       220 NOC                 
+
+        ID NAME                
+---------- --------------------
+       230 IT Helpdesk         
+       240 Government Sales    
+       250 Retail Sales        
+       260 Recruiting          
+       270 Payroll             
+           IT                  
+
+28 rows selected. 
+
+
+2 rows updated.
+
+
+        ID NAME                
+---------- --------------------
+        10 Administration      
+        20 Marketing           
+        30 Purchasing          
+        40 Human Resources     
+        50 Shipping            
+        20 IT                  
+        70 Public Relations    
+        80 Sales               
+        90 Executive           
+       100 Finance             
+       110 Accounting          
+
+        ID NAME                
+---------- --------------------
+       120 Treasury            
+       130 Corporate Tax       
+       140 Control And Credit  
+       150 Shareholder Services
+       160 Benefits            
+       170 Manufacturing       
+       180 Construction        
+       190 Contracting         
+       200 Operations          
+       210 IT Support          
+       220 NOC                 
+
+        ID NAME                
+---------- --------------------
+       230 IT Helpdesk         
+       240 Government Sales    
+       250 Retail Sales        
+       260 Recruiting          
+       270 Payroll             
+        20 IT                  
+
+28 rows selected. 
+
+
+Table DEPTS truncated.
+
+
+Table DEPTS altered.
+
+
+27 rows inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+ID      NAME                
+------- --------------------
+10      Administration      
+20      Marketing           
+30      Purchasing          
+40      Human Resources     
+50      Shipping            
+60      IT                  
+70      Public Relations    
+80      Sales               
+90      Executive           
+100     Finance             
+110     Accounting          
+
+ID      NAME                
+------- --------------------
+120     Treasury            
+130     Corporate Tax       
+140     Control And Credit  
+150     Shareholder Services
+160     Benefits            
+170     Manufacturing       
+180     Construction        
+190     Contracting         
+200     Operations          
+210     IT Support          
+220     NOC                 
+
+ID      NAME                
+------- --------------------
+230     IT Helpdesk         
+240     Government Sales    
+250     Retail Sales        
+260     Recruiting          
+270     Payroll             
+10      Accounts            
+20      IT                  
+A1      Accounts            
+
+30 rows selected. 
+
+
+Table DEPTS truncated.
+
+
+Table DEPTS altered.
+
+
+27 rows inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+        ID NAME                
+---------- --------------------
+        10 Administration      
+        20 Marketing           
+        30 Purchasing          
+        40 Human Resources     
+        50 Shipping            
+        60 IT                  
+        70 Public Relations    
+        80 Sales               
+        90 Executive           
+       100 Finance             
+       110 Accounting          
+
+        ID NAME                
+---------- --------------------
+       120 Treasury            
+       130 Corporate Tax       
+       140 Control And Credit  
+       150 Shareholder Services
+       160 Benefits            
+       170 Manufacturing       
+       180 Construction        
+       190 Contracting         
+       200 Operations          
+       210 IT Support          
+       220 NOC                 
+
+        ID NAME                
+---------- --------------------
+       230 IT Helpdesk         
+       240 Government Sales    
+       250 Retail Sales        
+       260 Recruiting          
+       270 Payroll             
+        10 Accounts            
+        20 IT                  
+        30 Accounts            
+
+30 rows selected. 
+
+*/
+

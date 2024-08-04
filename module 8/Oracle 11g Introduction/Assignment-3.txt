@@ -1,0 +1,18 @@
+C:\Users\Deepanshu Bajaj>sqlplus sys as sysdba
+
+SQL*Plus: Release 11.2.0.2.0 Production on Sun Jun 20 19:14:23 2021
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter password:
+ERROR:
+ORA-12543: TNS:destination host unreachable
+
+
+Enter user-name: hr
+Enter password:
+
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL>

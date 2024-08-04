@@ -1,0 +1,18 @@
+SELECT * FROM stdnt_log;
+
+/*
+------------------------
+Output:
+------------------------
+    ROLLNO STUDENTNAME          ST DATE_OF_B       FEES
+---------- -------------------- -- --------- ----------
+      1001 BOB                  IV 15-AUG-47       4500
+      1002 Alice                V  16-NOV-47       6500
+      1003 Sneha                V1 10-JAN-44      10000
+      1004 Lucy                 X  22-AUG-42       9000
+      1005 Vicky                IX 28-MAY-43       9000
+      1006 BB                   IV 15-AUG-47       4500
+
+6 rows selected. 
+
+*/

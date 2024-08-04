@@ -1,0 +1,23 @@
+select last_name from employees 
+where last_name like '%a%' and last_name like '%e%';
+
+---------------------------------
+Output
+---------------------------------
+Baer
+Bates
+Colmenares
+Davies
+De Haan
+Faviet
+Fleaur
+Gates
+Hartstein
+Markle
+Nayer
+Partners
+Patel
+Philtanker
+Raphaely
+Sewall
+Whalen

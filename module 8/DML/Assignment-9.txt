@@ -1,0 +1,27 @@
+delete from my_employee 
+where 
+    first_name like '%man%' or last_name like '%man%';
+
+
+-------------------------
+Output
+-------------------------
+
+2 rows deleted.
+
+
+
+
+select * FROM my_employee;
+-------------------------
+Output
+-------------------------
+
+201	Michael	Hartstein	20	13000
+202	Pat	Higgins	20	
+203	Susan	Mavris	40	
+205	Shelley	Higgins	110	12000
+100	Steven	King	90	29040
+101	Neena	Kochhar	90	20570
+102	Lex De	Haan	90	20570
+111	Ismael	Sciarra	100	7700

@@ -1,0 +1,52 @@
+select last_name,department_id from employees where department_id in (20,50) order by last_name;
+
+---------------------------------
+Output
+---------------------------------
+Atkinson	50
+Bell	50
+Bissot	50
+Bull	50
+Cabrio	50
+Chung	50
+Davies	50
+Dellinger	50
+Dilly	50
+Everett	50
+Fay	20
+Feeney	50
+Fleaur	50
+Fripp	50
+Gates	50
+Gee	50
+Geoni	50
+Grant	50
+Hartstein	20
+Jones	50
+Kaufling	50
+Ladwig	50
+Landry	50
+Mallin	50
+Markle	50
+Marlow	50
+Matos	50
+McCain	50
+Mikkilineni	50
+Mourgos	50
+Nayer	50
+OConnell	50
+Olson	50
+Patel	50
+Perkins	50
+Philtanker	50
+Rajs	50
+Rogers	50
+Sarchand	50
+Seo	50
+Stiles	50
+Sullivan	50
+Taylor	50
+Vargas	50
+Vollman	50
+Walsh	50
+Weiss	50

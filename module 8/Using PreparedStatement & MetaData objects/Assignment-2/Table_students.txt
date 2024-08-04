@@ -1,0 +1,40 @@
+ CREATE TABLE stdnts (
+	Rollno Number (4) Primary Key,
+	StudentName Varchar (20)  Not Null,
+	Standard Varchar (2) Not Null,
+	Date_Of_Birth Date,
+	Fees Number (9,2)
+);
+INSERT INTO stdnts VALUES(1002, 'ALICE', 'V', '16-Aug-1947', 4300.0);
+
+
+/*
+
+-------------------------------------------
+Output:(Before Inserting through java)
+-------------------------------------------
+
+Table STDNTS created.
+
+
+1 row inserted.
+
+*/
+
+
+
+SELECT
+    *
+FROM stdnts;
+
+
+/*
+
+-------------------------------------------------
+Output:(After Inserting through java)
+-------------------------------------------------
+
+1002	ALICE	V	16-AUG-47	4300
+1003	Daniel	X	17-AUG-46	5600
+
+*/
